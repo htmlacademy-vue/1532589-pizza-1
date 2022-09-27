@@ -210,9 +210,4 @@ export default {
 </script>
 
 <style>
-.dough__input b::before,
-.filling::before,
-.diameter__input span::before {
-  background: var(--bgImage);
-}
 </style>
