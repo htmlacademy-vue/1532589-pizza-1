@@ -33,7 +33,10 @@
                   v-for="dough in pizza.dough"
                   :key="dough.id"
                   class="dough__input"
-                  :style="{ '--bgImage': `url('${dough.image}')` }"
+                  :class="{
+                    'dough__input--light': dough.name === 'Тонкое',
+                    'dough__input--large': dough.name === 'Толстое',
+                  }"
                 >
                   <input
                     type="radio"
@@ -63,7 +66,6 @@
                     'diameter__input--normal': size.multiplier === 2,
                     'diameter__input--big': size.multiplier === 3,
                   }"
-                  :style="{ '--bgImage': `url('${size.image}')` }"
                 >
                   <input
                     type="radio"
@@ -109,7 +111,24 @@
                     >
                       <span
                         class="filling"
-                        :style="{ '--bgImage': `url('${ingredient.image}')` }"
+                        :class="{
+                          'filling--mushrooms': ingredient.name === 'Грибы',
+                          'filling--cheddar': ingredient.name === 'Чеддер',
+                          'filling--salami': ingredient.name === 'Салями',
+                          'filling--ham': ingredient.name === 'Ветчина',
+                          'filling--ananas': ingredient.name === 'Ананас',
+                          'filling--bacon': ingredient.name === 'Бекон',
+                          'filling--onion': ingredient.name === 'Лук',
+                          'filling--chile': ingredient.name === 'Чили',
+                          'filling--jalapeno': ingredient.name === 'Халапеньо',
+                          'filling--olives': ingredient.name === 'Маслины',
+                          'filling--tomatoes': ingredient.name === 'Томаты',
+                          'filling--salmon': ingredient.name === 'Лосось',
+                          'filling--mozzarella':
+                            ingredient.name === 'Моцарелла',
+                          'filling--parmesan': ingredient.name === 'Пармезан',
+                          'filling--blue_cheese': ingredient.name === 'Блю чиз',
+                        }"
                       >
                         {{ ingredient.name }}
                       </span>
