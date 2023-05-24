@@ -1,23 +1,6 @@
 <template>
   <body>
-    <header class="header">
-      <div class="header__logo">
-        <a href="index.html" class="logo">
-          <img
-            src="img/logo.svg"
-            alt="V!U!E! Pizza logo"
-            width="90"
-            height="40"
-          />
-        </a>
-      </div>
-      <div class="header__cart">
-        <a href="cart.html">0 ₽</a>
-      </div>
-      <div class="header__user">
-        <a href="#" class="header__login"><span>Войти</span></a>
-      </div>
-    </header>
+    <app-layout />
 
     <main class="content">
       <form action="#" method="post">
@@ -70,6 +53,7 @@ import BuilderDoughSelector from "@/modules/builder/components/BuilderDoughSelec
 import BuilderSizeSelector from "@/modules/builder/components/BuilderSizeSelector";
 import BuilderIngredientsSelector from "@/modules/builder/components/BuilderIngredientsSelector";
 import BuilderPizzaView from "@/modules/builder/components/BuilderPizzaView";
+import AppLayout from "@/layouts/AppLayout";
 
 export default {
   name: "Views",
@@ -78,6 +62,7 @@ export default {
     BuilderSizeSelector,
     BuilderIngredientsSelector,
     BuilderPizzaView,
+    AppLayout,
   },
   data() {
     return {
@@ -135,4 +120,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
